@@ -12,12 +12,13 @@ exports.createSauce = (req, res, next) => {
 
     delete sauceObject._id;//Avant on va enlever le champ id du coprs de le requète avant de copier l'objet
     const sauce = new sauce({
+
       ...sauceObject,//on utilise l'opérateur Spred et on passe req , il va aller copier title body etc..
       imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}` //genérer l'url de l'image
     });
     sauce.save()// appeller sa méthode save qui enregistre et retourne un promis
       .then(() => res.status(201).json({ message: 'sauce enregistré !'}))// code pour une bonne création de ressouce
-      .catch(error => res.status(400).json({ error }));// recupérer l'erreur et un code 400 
+      .catch(error => res.status(400).json({ error }));// recupérer un code 400 
     }
    // PUT: ModifySauce
 
