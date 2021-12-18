@@ -28,11 +28,13 @@ exports.login = (req, res, next) => {
     User.findOne({ email: req.body.email })//findOne pour trouver un seul utilisateur pour qui l'adress mail correspond
       .then(user => {
         if (!user) {
+
           return res.status(401).json({ error: 'Utilisateur non trouvé !' });
         }
         bcrypt.compare(req.body.password, user.password)//si utilisateur trouvé on compare
           .then(valid => {//booléane si compraraison bon ou pas 
             if (!valid) {
+              
               return res.status(401).json({ error: 'Mot de passe incorrect !' });//si utilisateur non trouvé
             }
             res.status(200).json({//connection validé, on renvoie token(chaine de caractère aléatoire)et user ID
