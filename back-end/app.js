@@ -18,12 +18,14 @@ const app = express(); //en appellant cette méthode express cela permets de cr�
 //il intercepte tous les requetes qui ont un json et mets a disposition dans rec.body
 app.use(express.json());
 
+
 //logique de connexion a mongodb
 mongoose
 .connect('mongodb+srv://BertheCILLY:linuxmoi@cluster0.7wcn4.mongodb.net/Projet6?retryWrites=true&w=majority',
  //mongoose.connect('mongodb://localhost:27017/test',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
+
 
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
