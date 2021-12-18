@@ -19,11 +19,10 @@ exports.createSauce = (req, res, next) => {
       .then(() => res.status(201).json({ message: 'sauce enregistré !'}))// code pour une bonne création de ressouce
       .catch(error => res.status(400).json({ error }));// recupérer l'erreur et un code 400 
     }
-
-
    // PUT: ModifySauce
 
 //route put pour une modification de l'objet
+
 
   exports.modifysauce = (req, res, next) => {
     const sauceObject = req.file ?
