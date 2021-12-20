@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
     likes: { type: Number, default: 0 },
     dislikes: { type: Number, default: 0 },
     usersLiked: { type: [String] },
-    UsersDisliked: { type: [String] },
+    usersDisliked: { type: [String] },
    });
 
 module.exports = mongoose.model('sauce', sauceSchema);
