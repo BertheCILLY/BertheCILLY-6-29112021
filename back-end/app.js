@@ -21,7 +21,7 @@ app.use(express.json());
 
 //logique de connexion a mongodb
 mongoose
-.connect('mongodb+srv://BertheCILLY:linuxmoi@cluster0.7wcn4.mongodb.net/Projet6?retryWrites=true&w=majority',
+.connect('mongodb+srv://@cluster0.7wcn4.mongodb.net/Projet6?retryWrites=true&w=majority',
  //mongoose.connect('mongodb://localhost:27017/test',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
