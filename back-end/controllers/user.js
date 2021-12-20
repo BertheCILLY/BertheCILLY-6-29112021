@@ -4,6 +4,7 @@ const User = require('../models/User');
 
 //on va hasher le mot de passe et avec hash crer par bcrypt on va enregistrer le user de la base de donnée, fonction asynchrone qui prend du temps 
 exports.signup = (req, res, next) => {
+console.log("signup");
 
 bcrypt.hash(req.body.password, 10)//dix tour
 

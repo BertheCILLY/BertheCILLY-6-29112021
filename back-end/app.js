@@ -8,7 +8,7 @@ const mongoose = require('mongoose');// j'importe mongoose dans mon fichier
 const path = require('path');
 
 // Importation des  routes
-const sauceRoutes = require('./routes/sauces');
+//const sauceRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
 
 // Mise en place securité
@@ -50,13 +50,13 @@ app.use((req, res, next) => {//on rajoute de headers sur les responses on dit qu
 
 // Gestion des images
 
-app.use("/images", express.static(path.join(__dirname, "images")));
+/*app.use("/images", express.static(path.join(__dirname, "images")));
 
 // Lancement helmet
 app.use(helmet());
 app.use(helmet.frameguard({ action: 'deny' })); //Pour interdire d'inclure cette page dans une iframe
 
-app.use('/api/sauces' , sauceRoutes);//pour cette route la on utilise le router qui est exposé par saucesRoutes
+app.use('/api/sauces' , sauceRoutes);//pour cette route la on utilise le router qui est exposé par saucesRoutes*/
 app.use('/api/auth', userRoutes);
 
 module.exports = app;
