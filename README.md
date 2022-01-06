@@ -10,7 +10,7 @@ Projet 6 Open ClassRooms
 1- Cloner ou télécharger les dossiers,</br>
      -`$ git clone https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6` </br>
 Ensuite cloner ce repository pour le backend</br>
-     -`$ git clone https://github.com/Maxwell-gith/MaximeHery_6_17092021`</br>
+     -`$ git clone https://github.com/XXXXXXXX`</br>
 2- Ouvrire avec votre logiciel de traitement ( vscode ou autres )</br>
 3- Ouvrire deux terminal, un pour le front et un pour le back </br>
 4- Rentrer dans le premier terminal : cd frontend  puis npm start </br>
